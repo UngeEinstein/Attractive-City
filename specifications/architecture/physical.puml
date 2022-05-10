@@ -1,0 +1,26 @@
+@startuml physical
+
+left to right direction
+
+node "Client computer" {
+  artifact "Frontend" as frontend
+}
+
+node "Google Cloud Platform" {
+  node "Cloud Run" {
+    artifact "Backend" as backend
+  }
+
+  node "Cloud SQL instance" {
+    database "Live database" as live_database
+    database "Dev database" as dev_database
+    database "Test database" as test_database
+  }
+}
+
+frontend -down- backend : "HTTPS"
+backend -down- live_database
+live_database -[hidden]down- dev_database
+dev_database -[hidden]down- test_database
+
+@enduml

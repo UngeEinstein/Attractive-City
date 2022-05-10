@@ -1,0 +1,34 @@
+.create-user-form-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.create-user-form {
+  max-width: 400px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.create-header,
+.button {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+  color: white;
+  border: none;
+}
+
+.already-user-link {
+  color: gray;
+}
+
+.create-header label {
+  padding: 10px 20px 2px;
+}
+
+.main-container {
+  padding: 5px 15px;
+}

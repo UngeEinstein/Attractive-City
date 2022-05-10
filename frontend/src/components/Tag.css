@@ -1,0 +1,22 @@
+.tag {
+  font-size: 0.8rem;
+  padding: 0.35em 0 0.35em 0.35em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tag > * {
+  margin-right: 0.35em;
+}
+
+@media (max-width: 730px) {
+  .tag {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .tag {
+    font-size: 0.6rem;
+  }
+}

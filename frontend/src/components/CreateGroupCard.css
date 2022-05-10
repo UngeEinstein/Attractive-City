@@ -1,0 +1,15 @@
+.create-group-card {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.create-group-card .button-container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin-top: 0.5rem;
+}

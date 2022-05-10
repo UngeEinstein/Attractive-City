@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Titillium+Web:wght@300&family=Zen+Kurenaido&display=swap");
+
+.homepage-main-container {
+  background-image: url("../textures/main.jpg");
+
+  /* Full height */
+  height: calc(92vh);
+  font-family: "Libre Baskerville", serif;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.homepage-main-container > div > h2 {
+  padding: 10px;
+  font-size: 8vh;
+}
+
+.homepage-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10vh;
+}
+
+div[class*="box"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  font-size: 2rem;
+}
+
+.homepage-text-container {
+  background-color: #0004;
+  padding: 20px;
+  text-align: center;
+}
+
+.homepage-text-container > p {
+  font-size: 2rem;
+}
+
+.box-1 {
+  width: fit-content;
+}
+
+.homepage-btn {
+  line-height: 50px;
+  height: 50px;
+
+  text-align: center;
+  min-width: fit-content;
+  width: 30%;
+  cursor: pointer;
+}
+
+/* 
+  ========================
+        BUTTON ONE
+  ========================
+  */
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+@media screen and (max-width: 650px) {
+  .homepage-text-container > p {
+    font-size: 1rem;
+  }
+  .homepage-btn {
+    height: fit-content;
+    font-size: 1rem;
+    text-align: center;
+    min-width: fit-content;
+    width: 30%;
+    cursor: pointer;
+  }
+}
+@media screen and (min-height: 800px) {
+  .homepage-main-container {
+    /* Full height */
+    height: calc(100vh - 56px);
+  }
+}

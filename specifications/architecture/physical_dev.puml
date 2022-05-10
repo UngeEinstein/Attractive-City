@@ -1,0 +1,23 @@
+@startuml physical_dev
+
+node "Development computer" {
+  artifact "Frontend" as frontend
+  artifact "Backend" as backend
+
+  frontend -right- backend : "HTTP"
+}
+
+node "Google Cloud Platform" {
+  node "Cloud SQL instance" {
+    database "Live database" as live_database
+    database "Dev database" as dev_database
+    database "Test database" as test_database
+  }
+}
+
+backend -- dev_database : "Cloud SQL Auth proxy"
+backend -- test_database : "Cloud SQL Auth proxy"
+dev_database -[hidden]right- live_database
+live_database -[hidden]right- test_database
+
+@enduml

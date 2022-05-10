@@ -1,0 +1,22 @@
+.column-image {
+  width: 25vw;
+  height: 32vh;
+  object-fit: cover;
+}
+
+.row {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.image-container {
+  width: 80vw;
+}
+
+.carousel {
+  margin: 20px 0;
+}
+
+.homeContainer {
+  background-color: rgba(0, 0, 0, 0);
+}

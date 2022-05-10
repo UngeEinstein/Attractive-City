@@ -1,0 +1,12 @@
+.tag_select > * {
+  margin-bottom: 0.25em;
+}
+
+.tag_select > .controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag_select > .controls > * {
+  margin-right: 0.5em;
+}

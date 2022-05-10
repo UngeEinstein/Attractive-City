@@ -1,0 +1,28 @@
+@startuml usecase_carousel
+
+actor "User" as user
+
+box "Frontend"
+participant "React UI" as react_ui
+participant "Service" as service
+end box
+
+box "Backend"
+participant "API" as api
+participant "Carousel controller" as carousel_controller
+participant "Database connector" as database_connector
+end box
+
+user -> react_ui : Navigate to \nsaved page
+react_ui -> service : Initiate experience \nlist request
+service -> api : Send experience \nlist request
+api -> carousel_controller : Distribute request \nfor processing
+carousel_controller -> database_connector : Fetch \npersistent data
+carousel_controller <-- database_connector : Return data
+api <-- carousel_controller : Return data
+service <-- api : Send response
+react_ui <-- service : Return data
+user <-- react_ui : Display data
+
+
+@enduml

@@ -1,0 +1,25 @@
+.group-results__container {
+  --main-color: #de1a1a;
+  --secondary-color: rgb(163, 56, 196);
+  background: linear-gradient(
+    90deg,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  text-align: center;
+}
+
+.group-results__results {
+  display: flex;
+  position: absolute;
+  right: 0.5em;
+  z-index: 10; /* Icons stay in front */
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.group-results__results-icon {
+  margin: 0 0.5em;
+}

@@ -1,0 +1,11 @@
+.saved-offcanvas__container {
+  width: 100vw;
+}
+
+.saved-offcanvas__header {
+  background-color: #73bcc4;
+}
+
+.saved-offcanvas__body {
+  padding: 0;
+}

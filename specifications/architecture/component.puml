@@ -1,0 +1,49 @@
+@startuml Component
+
+package "Backend" as backend {
+  rectangle "API" as api
+  rectangle "Controllers" as controllers #line.dotted {
+    rectangle "Carousel controller" as carousel_controller
+    rectangle "Experience controller" as experience_controller
+    rectangle "Group controller" as group_controller
+    rectangle "User controller" as user_controller
+  }
+  rectangle "AI models" as ai_models #line.dotted {
+    rectangle "Recommendation model" as recommendation_model #LightGreen
+  }
+  rectangle "Database connector" as database_connector
+
+  api --> carousel_controller
+  api <.. carousel_controller
+  api --> experience_controller
+  api <.. experience_controller
+  api --> group_controller
+  api <.. group_controller
+  api --> user_controller
+  api <.. user_controller
+  
+  carousel_controller --> recommendation_model
+  carousel_controller <.. recommendation_model
+
+  carousel_controller --> database_connector
+  carousel_controller <.. database_connector
+  experience_controller --> database_connector
+  experience_controller <.. database_connector
+  group_controller --> database_connector
+  group_controller <.. database_connector
+  user_controller --> database_connector
+  user_controller <.. database_connector
+}
+
+package "Frontend" as frontend #LightGreen {
+  rectangle "React UI" as react_ui
+  rectangle "Services" as services
+
+  react_ui --> services
+  react_ui <.. services
+}
+
+services --> api
+services <.. api
+
+@enduml

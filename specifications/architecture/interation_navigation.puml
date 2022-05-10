@@ -1,0 +1,32 @@
+@startuml interaction_navigation
+
+rectangle "Start" as start #Black;text:White
+rectangle "Navigation bar" as navbar #LightGray
+
+rectangle "Has navigation bar" as has_navbar #line.dotted {
+  rectangle "Home" as home
+  rectangle "Requires logged in" as requires_logged_in #line.dotted {
+    rectangle "Experience swiper" as experience_swiper
+    rectangle "Groups" as groups
+    rectangle "Group/GroupID" as group_hub
+    rectangle "Group/Results/GroupID" as group_results
+    rectangle "Group/Swiper/GroupID" as group_swiper
+    rectangle "Saved experiences" as saved_experiences
+
+    groups --> group_hub
+    group_hub --> group_results
+    group_hub --> group_swiper
+  }
+
+  home --> experience_swiper
+  home --> groups
+}
+
+start --> home
+
+navbar --> experience_swiper
+navbar --> groups
+navbar --> home
+navbar --> saved_experiences
+
+@enduml

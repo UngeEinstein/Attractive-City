@@ -1,0 +1,11 @@
+.tag_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.tag_list > * {
+  margin-right: 0.5em;
+  margin-bottom: 0.3em;
+}

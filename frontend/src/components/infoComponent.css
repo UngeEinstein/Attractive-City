@@ -1,0 +1,164 @@
+.info-component {
+  width: 80vw;
+  max-width: 1200px;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid gray;
+  padding: 0;
+}
+
+.head-image {
+  object-fit: cover;
+  width: 100%;
+  max-height: 60vh;
+  clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 70% 100%, 0% 100%);
+}
+.text-container {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.name-container {
+  width: 50%;
+}
+.general-information {
+  width: 50%;
+  border-left: 4px solid white;
+}
+.name-container h1 {
+  font-size: 2.3em;
+  word-wrap: break-word;
+}
+.name-container h2 {
+  font-size: 1.2em;
+}
+.age-number-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2vw;
+}
+
+.number-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2em;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 0.5em;
+  padding-left: 0.5em;
+}
+
+.basic-info-container {
+  background-color: lightgray;
+  word-break: break-word;
+}
+.basic-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.basic-info p {
+  margin: 2vw;
+}
+
+.image-container {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+}
+.top-container {
+  border-top: 5vh solid transparent;
+  border-left: 80vw solid #17b0c0;
+  position: absolute;
+  top: 46vh;
+}
+.information-container {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+  clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0 100%);
+  padding: 100px;
+  margin-top: -15%;
+}
+
+.info-component .description {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+  padding: 4vh 0;
+}
+
+.info-component .description > button {
+  width: 30%;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .info-component {
+    width: 100%;
+  }
+
+  .information-container {
+    padding: 100px 50px;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0 100%);
+  }
+
+  .head-image {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 70% 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 730px) {
+  .info-component {
+    border: none;
+  }
+
+  .information-container {
+    padding: 100px 50px;
+    clip-path: polygon(0% 0%, 100% 2%, 100% 95%, 0 100%);
+  }
+
+  .head-image {
+  }
+
+  .text-container {
+    margin-top: 4vh;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .name-container {
+    width: 100%;
+  }
+
+  .general-information {
+    border-left: none;
+    border-top: 4px solid white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .basic-info-container {
+    height: 100%;
+  }
+
+  .info-component .description > button {
+    width: 100%;
+  }
+}
+
+/* 56B3BD */
+/* 3872C4 */

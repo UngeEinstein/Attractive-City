@@ -1,0 +1,7 @@
+/backend/build/
+/backend/node_modules/
+/backend/tests/
+/frontend/
+/mysql/
+/python/venv/
+/specifications/

@@ -1,0 +1,44 @@
+@startuml module_backend
+
+package "Network layer" as network_layer {
+  rectangle "API endpoint" as api_endpoint
+}
+
+package "Logic layer" as logic_layer {
+  rectangle "User controller" as user_system
+  rectangle "Carousel controller" as carousel_controller
+  rectangle "Experience controller" as experience_controller
+  rectangle "Group controller" as group_controller
+  rectangle "Controller utility" as controller_utility
+}
+
+package "AI layer" as ai_layer {
+  collections "AI models" as ai #line:black
+}
+
+package "Data layer" as data_layer {
+  rectangle "Database connector" as database_connector
+}
+
+network_layer -[hidden]down-> logic_layer
+logic_layer -[hidden]down-> ai_layer
+ai_layer -[hidden]down-> data_layer
+
+api_endpoint --> user_system
+api_endpoint --> carousel_controller
+api_endpoint --> experience_controller
+api_endpoint --> group_controller
+
+carousel_controller --> controller_utility
+experience_controller --> controller_utility
+group_controller --> controller_utility
+user_system --> controller_utility
+carousel_controller ---> ai
+carousel_controller ----> database_connector
+experience_controller ----> database_connector
+group_controller ----> database_connector
+user_system ----> database_connector
+
+ai --> database_connector
+
+@enduml

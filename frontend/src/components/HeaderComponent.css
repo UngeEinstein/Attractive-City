@@ -1,0 +1,66 @@
+.header-container {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+  height: 8vh;
+  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+}
+
+.header-text-container {
+  border: none;
+  background: transparent;
+  color: white;
+}
+.header-text {
+  color: white;
+}
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+}
+
+.dropdown-menu {
+  padding: 0;
+  border-color: white;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+}
+
+.navbar-user-dropdown-item {
+  margin-top: 0.5px;
+  border-color: white;
+  border-radius: 3px;
+}
+
+.toggle {
+  display: none;
+}
+
+.me-auto {
+  color: white;
+}
+
+@media screen and (max-width: 767.5px) {
+  .toggle {
+    display: block;
+  }
+
+  nav > tooltip.inner {
+    display: none;
+  }
+}

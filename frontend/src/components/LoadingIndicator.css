@@ -1,0 +1,16 @@
+.loading-indicator__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.loading-indicator__spinner {
+  height: 150px;
+  width: 150px;
+}

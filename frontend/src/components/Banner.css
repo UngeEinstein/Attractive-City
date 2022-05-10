@@ -1,0 +1,129 @@
+.banner__container {
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.banner__rotation-container {
+  touch-action: pan-y;
+  flex-direction: row;
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.banner__rotation-container > img {
+  object-fit: cover;
+  min-height: 78vh;
+  max-height: 78vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.banner__info-pane {
+  background-color: #000000a0;
+  color: white;
+  padding: 1em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: absolute;
+  max-height: 40%;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
+  min-height: 200px;
+}
+
+.banner__experience-title {
+  display: table-row;
+  font-size: 1.5em;
+}
+
+.banner__experience-description {
+  overflow-y: auto;
+}
+
+.banner__info-pane > button {
+  flex-shrink: 0;
+  margin-left: 1em;
+}
+
+.banner_info-pane-column {
+  display: grid;
+  max-height: 100%;
+  grid-template-rows: 30px fit-content(50px) 98px;
+}
+
+.banner__view-type-indicator-container {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  top: 5em;
+  min-height: 10%;
+}
+
+.banner__view-type-indicator {
+  border-radius: 10%;
+  height: 30vh;
+  justify-content: center;
+  width: 30vw;
+}
+
+@media (max-width: 730px) {
+  .banner_info-pane-column {
+    grid-template-rows: 30px fit-content(45px) 80px;
+  }
+  .banner__experience-description {
+    font-size: 0.8rem;
+  }
+
+  .banner__info-pane > button {
+    margin-left: 0;
+    width: 100%;
+    top: 77%;
+  }
+
+  .banner__info-pane {
+    flex-direction: column;
+    align-items: normal;
+    padding: 0.4em 0.7em;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner_info-pane-column {
+    grid-template-rows: 24px fit-content(37px) 80px;
+  }
+
+  .banner__experience-description {
+    font-size: 0.8rem;
+  }
+
+  .banner__experience-title {
+    font-size: 1.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+  }
+
+  .banner__info-pane {
+    padding: 0.5em;
+  }
+}
+
+@media (max-width: 300px) {
+  .banner__experience-title {
+    font-size: 1.1rem;
+  }
+}

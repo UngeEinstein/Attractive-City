@@ -1,0 +1,57 @@
+@startuml misusecase
+
+' left to right direction
+top to bottom direction
+
+' Actors
+actor "Developer" as developer #White;line:Black
+actor "User" as user #White;line:Black
+
+' Use cases
+usecase "Explore experiences" as explore_experiences #White;line:Black
+usecase "Explore experiences\nas a group" as explore_experiences_group #White;line:Black
+usecase "Commit code" as commit_code #White;line:Black
+usecase "Develop application" as develop_application #White;line:Black
+usecase "Download development packages" as download_development_packages #White;line:Black
+usecase "Input code" as input_code #White;line:Black
+usecase "Input credentials" as input_credentials #White;line:Black
+usecase "Load frontend application" as load_frontend_application #White;line:Black
+usecase "Login" as login #White;line:Black
+usecase "Transmit credentials" as transmit_credentials #White;line:Black
+usecase "Use application" as use_application #White;line:Black
+
+' Misuse cases
+usecase "Denial of service" as deniel_of_service #Black;line:Gold;text:White
+usecase "Retrieve codebase" as retrieve_codebase #Black;line:Gold;text:White
+usecase "Retrieve credentials" as retrieve_credentials #Black;line:Gold;text:White
+usecase "Spread malware" as spread_malware #Black;line:Gold;text:White
+
+' Attacker
+actor "Attacker" as attacker #Black;line:Black
+
+developer --> develop_application
+user --> use_application
+
+develop_application --> commit_code : Include
+develop_application --> download_development_packages : Include
+develop_application --> input_code : Include
+login --> transmit_credentials : Include
+use_application --> explore_experiences : Extend
+use_application --> explore_experiences_group : Extend
+use_application --> load_frontend_application : Include
+use_application --> login : Include
+login --> input_credentials : Include
+
+load_frontend_application <-- deniel_of_service : Threaten
+commit_code <-- retrieve_codebase : Threaten
+input_code <-- retrieve_codebase : Threaten
+input_credentials <-- retrieve_credentials : Threaten
+transmit_credentials <-- retrieve_credentials : Threaten
+download_development_packages <-- spread_malware : Threaten
+
+deniel_of_service <-- attacker
+retrieve_codebase <-- attacker
+retrieve_credentials <-- attacker
+spread_malware <-- attacker
+
+@enduml

@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "ac-testenv-328009"
+  },
+  "targets": {
+    "ac-testenv-328009": {
+      "hosting": {
+        "main": [
+          "attractive-city"
+        ],
+        "main2": [
+          "ac-testenv-328009"
+        ]
+      }
+    }
+  }
+}

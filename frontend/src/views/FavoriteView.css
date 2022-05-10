@@ -1,0 +1,28 @@
+.favorite-view__container {
+  color: white;
+  width: 60%;
+  margin: auto;
+}
+
+.favorite-view__checkbox {
+  width: fit-content;
+  margin-bottom: 3vh;
+}
+
+.favorite-view__title {
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin-bottom: 3vh;
+}
+
+@media (max-width: 730px) {
+  .favorite-view__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .favorite-view__container {
+    width: 95%;
+  }
+}

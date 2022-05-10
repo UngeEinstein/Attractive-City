@@ -1,0 +1,7 @@
+.popover-header {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 179, 189, 1) 0%,
+    rgba(56, 114, 196, 1) 100%
+  );
+}

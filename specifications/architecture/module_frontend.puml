@@ -1,0 +1,15 @@
+@startuml module_frontend
+
+left to right direction
+
+rectangle "Backend API" as backend_api
+rectangle "React UI" as react_ui
+rectangle "Services" as services
+rectangle "User context" as user_context
+
+react_ui --> services
+react_ui --> user_context
+user_context --> services
+services --> backend_api
+
+@enduml
